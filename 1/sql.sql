@@ -1,0 +1,17 @@
+
+
+
+SELECT * FROM `t1` LEFT JOIN t2 ON t1.UserID=t2.UserID LEFT JOIN t3 on t1.UserID=t3.UserID;
+
+
+SELECT t1.VisitID, t1.SourceID,t1.PageViews, t2.ItemID, t2.CreationDate, t2.Status, t2.Mark, t2.Model,t3.EventID,t3.Cost FROM `t1` LEFT JOIN t2 ON t1.UserID=t2.UserID LEFT JOIN t3 on t1.UserID=t3.UserID
+UNION
+SELECT t1.VisitID, t1.SourceID,t1.PageViews, t2.ItemID, t2.CreationDate, t2.Status, t2.Mark, t2.Model,t3.EventID,t3.Cost FROM `t1` RIGHT JOIN t2 ON t1.UserID=t2.UserID RIGHT JOIN t3 on t1.UserID=t3.UserID
+
+
+SELECT t1.VisitID, t1.SourceID,t1.PageViews, t2.ItemID, t2.CreationDate, t2.Status, t2.Mark, t2.Model FROM `t1` LEFT JOIN t2 ON t1.UserID=t2.UserID
+UNION
+SELECT t1.VisitID, t1.SourceID,t1.PageViews, t2.ItemID, t2.CreationDate, t2.Status, t2.Mark, t2.Model FROM `t1` RIGHT JOIN t2 ON t1.UserID=t2.UserID
+
+
+SELECT t1.UserId, t2.UserID, t3.UserID, t1.VisitID, t1.SourceID,t1.PageViews, t2.ItemID, t2.CreationDate, t2.Status, t2.Mark, t2.Model,t3.EventID,t3.Cost FROM `t1` LEFT JOIN t2 ON t1.UserID=t2.UserID LEFT JOIN t3 ON t1.UserID=t3.UserID
