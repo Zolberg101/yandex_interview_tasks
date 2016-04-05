@@ -1,0 +1,10 @@
+timestamp
+user_id
+url
+geo_id
+category
+price
+click_id
+category_from_url
+category_fail
+category_fail_2
